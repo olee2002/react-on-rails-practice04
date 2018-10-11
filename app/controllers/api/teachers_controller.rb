@@ -4,6 +4,11 @@ class Api::TeachersController < ApplicationController
         @teachers = Teacher.all
         render json: @teachers
     end
+
+    def show
+        @teacher = Teacher.find(params[:id])
+        render json: @teacher
+    end
     
     def create
         @teacher= Teacher.create(teacher_params)
@@ -22,7 +27,7 @@ class Api::TeachersController < ApplicationController
 
     private
     def teacher_params
-        params.require(:teacher).permit(:name, :subject, email)
+        params.require(:teacher).permit(:name, :subject, :email)
     end
 
 end

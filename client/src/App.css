@@ -17,6 +17,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.container{
+  margin-top: 30px;
+  text-align: left;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 30px;
+}
+input{
+  margin-left: 5px
+}
 
 .App-link {
   color: #61dafb;
